@@ -6,13 +6,15 @@
 /*   By: gmolin <gmolin@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 14:38:55 by vkuokka           #+#    #+#             */
-/*   Updated: 2020/01/20 11:49:06 by gmolin           ###   ########.fr       */
+/*   Updated: 2020/01/23 16:56:02 by gmolin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 
 # define LIBFT_H
+# define BUFF_SIZE 1
+# define FD_MAX 4864
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -27,6 +29,7 @@ typedef struct		s_list
 
 void				ft_bzero(void *s, size_t n);
 int					ft_count_digits(intmax_t n, intmax_t base);
+int					ft_get_next_line(const int fd, char **line)
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
